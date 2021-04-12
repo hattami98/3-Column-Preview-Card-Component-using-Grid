@@ -1,0 +1,146 @@
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray:  hsl(0, 0%, 95%);
+}
+
+html {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    margin: 0;
+    background-color: var(--very-light-gray);
+    color: var(--very-light-gray);
+    font-size: 15px;
+}
+
+.container {
+    /* w = 1440 */
+    /* width: 63.75vw; */
+
+    /* w = 720 */
+    width: 922px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 170px;
+    margin-bottom: 130px;
+    display: flex;
+    flex-direction: row;
+}
+
+.card:first-child {
+    border-radius: 8px 0 0 8px;
+}
+
+.card:last-child {
+    border-radius: 0 8px 8px 0;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 48px;
+}
+
+.card-topPart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+
+#sedans {
+    background-color: var(--bright-orange);
+}
+
+#suvs {
+    background-color: var(--dark-cyan);
+}
+
+#luxury {
+    background-color: var(--very-dark-cyan);
+}
+.heading {
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+.description {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.button {
+    /* position: relative; */
+    bottom: 48px;
+    background-color: var(--very-light-gray);
+    height: 50px;
+    border: 2px solid var(--very-light-gray);
+    border-radius: 25px;
+    padding: 0 33px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.button-sedans {
+    color:var(--bright-orange);
+}
+
+.button-suvs {
+    color:var(--dark-cyan);
+}
+
+.button-luxury {
+    color:var(--very-dark-cyan);
+}
+
+.button:hover, .button:active {
+    background-color: unset;
+    border: 2px solid var(--very-light-gray);
+    color:var(--very-light-gray);
+}
+
+.attribution { 
+    align-self: flex-start;
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width: 720px ) {
+    .container {
+        width: calc(100% - 48px);
+        /* margin-left: 24px;
+        margin-right: 24px; */
+        flex-direction: column;
+    }
+
+    .card:first-child {
+        border-radius: 8px 8px 0 0;
+    }
+    
+    .card:last-child {
+        border-radius: 0 0 8px 8px;
+    }
+}
+
+@media screen and (max-width: 988px){
+    .container {
+        width: 93.33vw;
+    }
+}
